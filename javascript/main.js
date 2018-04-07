@@ -14,3 +14,16 @@ const buildDomString = (data) => {
         printToDom(domString, "bothPlayers-container");
 };
 
+function successFunction () {
+    const data = JSON.parse(this.responseText);
+    buildDomString(data);
+};
+
+
+const genericXHRRequest = () => {
+    const myRequest = new HMLHttpRequest();
+    myRequest.addEventListener('load',);
+    myRequest.addEventListener('error',);
+    myRequest.open('GET',);
+    myRequest.send();
+};
