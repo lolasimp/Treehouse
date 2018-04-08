@@ -1,18 +1,26 @@
-console.log('Lola');
+// console.log('Lola');
 
 // PrintToDom
 const printToDom = (domString, divId) => {
     document.getElementById(divId).innerHTML = domString;
 } 
 
-const buildDomString = (data) => {
+const buildDomString = (data1, data2) => {
     let domString = '';
         domString += `<div> class="card">`;
-        domString +=    `<img src="${data.gravatar_url}">`;
-        domString +=    `<p id="points">${data.points.total}</p>`;
+        domString +=    `<div class='col-md-4 col-md-offset-1'>`;
+        domString +=        `<img src="${data1.gravatar_url}">`;
+        domString +=        `<h2 id="points">${data1.points.total}</h2>`;
+        domString +=    `</div>`;
+        domString +=    `<div class='col-md-4 col-md-offset-1'>`;
+        domString +=        `<img src="${data2.gravatar_url}">`;
+        domString +=        `<h2> id="points">${data2.points.total}</h2>`;
+        domString +=    `</div>`
         domString += `<div>`;
         printToDom(domString, "bothPlayers-container");
 };
+
+
 
 function successFunction () {
     const data = JSON.parse(this.responseText);
@@ -27,3 +35,12 @@ const genericXHRRequest = () => {
     myRequest.open('GET',);
     myRequest.send();
 };
+
+const startApplication = () => {
+    const button = document.getElementById('button');
+    button.addEventListener('click',() => {
+        let
+    })
+}
+
+startApplication();
