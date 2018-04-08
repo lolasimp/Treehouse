@@ -1,3 +1,7 @@
-body {
-    background-color: red;
+#winner-container {
+    padding-top: 540px;
+}
+
+#button {
+   margin-bottom: 50px;
 }
