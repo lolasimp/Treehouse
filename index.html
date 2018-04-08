@@ -9,9 +9,17 @@
     <title>Treehouse Cage Match</title>
 </head>
 <body class="text-center">
-    <input id="player1" type="text" placeholder="player1">
-    <input id="player2" type="text" placeholder="player2">
-    <button id="button">Start Cage Match</button>
+        <div class="row">
+                <div class="col-md-4">
+                        <h2>Player 1:</h2><input id="player1" type="text" placeholder="player1">
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                        <h2>Player 2:</h2><input id="player2" type="text" placeholder="player2">
+                </div>
+              </div>
+    <!-- <h2>Player 1:</h2><input id="player1" type="text" placeholder="player1">
+    <h2>Player 2:</h2><input id="player2" type="text" placeholder="player2"> -->
+    <button id="button"class="btn btn-default" type="submit">Start Cage Match</button>
     <div id="bothPlayers-container"></div>
     <div id="winner-container"></div>
     <script src="../javascript/main.js"></script>
