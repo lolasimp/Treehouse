@@ -10,25 +10,39 @@ const buildDomString = (data1, data2) => {
         domString += `<div class="card">`;
         domString +=    `<div class='col-md-4 col-md-offset-1'>`;
         domString +=        `<img src="${data1.gravatar_url}">`;
-        domString +=        `<h2id="points">${data1.points.total}</h2>`;
+        domString +=        `<h2 id="points">${data1.points.total}</h2>`;
         domString +=    `</div>`;
         domString +=    `<div class='col-md-4 col-md-offset-1'>`;
         domString +=        `<img src="${data2.gravatar_url}">`;
-        domString +=        `<h2id="points">${data2.points.total}</h2>`;
+        domString +=        `<h2 id="points">${data2.points.total}</h2>`;
         domString +=    `</div>`
         domString += `<div>`;
         printToDom(domString, "bothPlayers-container");
 };
 
+
 const winner = (pdata1, pdata2) => {
     let domString = '';
     if(pdata1.points.total > pdata2.points.total) {
-        domString += `<div>${pdata1.name} Wins!</div>`;
+        domString += `<h1 class="bg-primary">${pdata1.name} Winner!!!!!!</h1>`;
+        winnerBadges(pdata1);
     } else {
-        domString += `<div>${pdata2.name} Winnner!!</div>`;
+        domString += `<h1 class="bg-primary">${pdata2.name} Winner!!!!!!</h1>`;
+        winnerBadges(pdata2);
     }
     printToDom(domString, "winner-container");
 };
+
+const winnerBadges =(winner) => {
+    let domString = '';
+    const badges = winner.badges;
+    for(i = 0; i <badges.length; i++){
+        domString += `<div class="col-xs-3 text-center">`;
+        domString += `<a href='${badges[i].url}'><img class="img-responsive col-xs-3" src='${badges[i].icon_url}'></a>`;
+        domString += `</div>`;
+    }
+    printToDom(domString, "badge-container");
+}
 
 const returnSecondPlayer = (data1, player2) => {
     const myRequest = new XMLHttpRequest();
