@@ -1,5 +1,8 @@
 #winner-container {
-    padding-top: 540px;
+    padding-top: 400px;
+    padding-bottom: 160px;
+    margin-right: 400px;
+    margin-left: 400px;
 }
 
 #button {
@@ -8,4 +11,15 @@
 
 #bothPlayers-container {
     border-radius: 100%;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
 }
