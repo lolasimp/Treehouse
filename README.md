@@ -4,11 +4,11 @@
 Used Bootstrap and XHR request to create a Treehouse Match where you enter two players names and it returns a winner!!
 
 ## Screenshots
-![Webpage]
+![Webpage](https://raw.githubusercontent.com/lolasimp/Treehouse/master/screenshots/Screenshot%201.png)
 ## Screenshots
-![Webpage]
+![Webpage](https://raw.githubusercontent.com/lolasimp/Treehouse/master/screenshots/Screenshot%202.png)
 ## Screenshots
-![Webpage]
+![Webpage](https://raw.githubusercontent.com/lolasimp/Treehouse/master/screenshots/Screenshot%203.png)
 
 ## How to Run
 1. Clone down this repo, and cd into the project
